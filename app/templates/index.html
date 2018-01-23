@@ -7,6 +7,16 @@
 {% endblock %}
 
 {% block content %}
+
+
+    <div class = "container">
+        <form>
+        <input type= "text" name="movie_query" placeholder="Search for a Movie or series" class ="form-control">
+        <input type="submit" value="submit" class="btn btn-default">
+        </form>
+    </div>
+    
+    <div class = "container">
         <h3> popular Movies</h3>
         <div>
             {{ macro.displayMovieList(popular)}}
@@ -21,15 +31,6 @@
         <h3> Now Showing Movies</h3>
         <div>{{ macro.displayMovieList(now_showing)}}
         </div>
-    
+    </div>
 {% endblock %}
-
-{% block content %}
-
-<div class = "container">
-    <form>
-        <input type= "text" name="movie_query" placeholder="Search for a Movie or series" class ="form-control">
-        <input type="submit" value="submit" class="btn btn-default">
-    </form>
-</div>
 
